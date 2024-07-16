@@ -1,0 +1,70 @@
+{
+  "name": "@utxo-global/utxo-wallet-adapter",
+  "license": "MIT",
+  "version": "0.0.3",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "sideEffects": false,
+  "dependencies": {
+    "@tanstack/react-query": "^5.48.0",
+    "@types/node": "^20.14.9",
+    "bitcoinjs-lib": "^6.1.6",
+    "eventemitter3": "^4.0.7",
+    "react": "^18.3.1",
+    "sats-connect": "^2.4.1",
+    "typescript": "^5.5.2",
+    "use-sync-external-store": "^1.2.0",
+    "zustand": "^4.1.1"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/use-sync-external-store": "^0.0.3",
+    "happy-dom": "^13.3.8",
+    "tsup": "^6.7.0"
+  },
+  "files": [
+    "dist",
+    "connectors",
+    "core/package.json"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "rm -rf dist && tsup",
+    "test": "vitest --run"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    },
+    "./core": {
+      "types": "./dist/core.d.ts",
+      "import": "./dist/core.mjs",
+      "default": "./dist/core.js"
+    },
+    "./connectors/unisat": {
+      "types": "./dist/connectors/unisat.d.ts",
+      "import": "./dist/connectors/unisat.mjs",
+      "default": "./dist/connectors/unisat.js"
+    },
+    "./connectors/xverse": {
+      "types": "./dist/connectors/xverse.d.ts",
+      "import": "./dist/connectors/xverse.mjs",
+      "default": "./dist/connectors/xverse.js"
+    },
+    "./connectors/utxo-global": {
+      "types": "./dist/connectors/utxo-global.d.ts",
+      "import": "./dist/connectors/utxo-global.mjs",
+      "default": "./dist/connectors/utxo-global.js"
+    }
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
+}

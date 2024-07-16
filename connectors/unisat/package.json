@@ -1,0 +1,4 @@
+{
+  "main": "../../dist/connectors/unisat.js",
+  "module": "../../dist/connectors/unisat.mjs"
+}

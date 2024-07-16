@@ -1,0 +1,4 @@
+{
+  "main": "../../dist/connectors/utxo-global.js",
+  "module": "../../dist/connectors/utxo-global.mjs"
+}
