@@ -5,7 +5,7 @@ import { UnisatConnector } from "@utxo-global/utxo-wallet-adapter/connectors/uni
 import { useEffect, useMemo, useState } from "react";
 import { truncateAddress } from "../utils"
 import { XverseConnector } from "@utxo-global/utxo-wallet-adapter/connectors/xverse";
-import { UtxoGlobalConnector } from "@utxo-global/utxo-wallet-adapter/connectors/utxo-global";
+import { UtxoGlobalConnector, UtxoGlobalBitcoinConnector, UtxoGlobalCKBConnector } from "@utxo-global/utxo-wallet-adapter/connectors/utxo-global";
 import SignMessage from "../components/SignMessage"
 import SendNativeCoin from "../components/SendNativeCoin"
 import SignPSBT from "../components/SignPsbt"
@@ -113,11 +113,21 @@ export default function Home() {
       <button
         className="bg-[#000000] text-[#FFF] text-xl py-3 px-5 rounded-lg flex justify-between items-center gap-2"
         onClick={() => connect({
-          connector: new UtxoGlobalConnector(),
+          connector: new UtxoGlobalBitcoinConnector(),
         })}
       >
         <img className="h-8" src="utxo.png" />
-        <span>UTXO Global Wallet</span>
+        <span>UTXO Global BTC</span>
+        &rarr;
+      </button>
+      <button
+        className="bg-[#000000] text-[#FFF] text-xl py-3 px-5 rounded-lg flex justify-between items-center gap-2"
+        onClick={() => connect({
+          connector: new UtxoGlobalCKBConnector(),
+        })}
+      >
+        <img className="h-8" src="utxo.png" />
+        <span>UTXO Global CKB</span>
         &rarr;
       </button>
     </div>
