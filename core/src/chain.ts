@@ -51,17 +51,6 @@ export const signet: Chain = {
     apiUrl: "https://mempool.space/signet/api",
 }
 
-export const bellMainnet: Chain = {
-    name: "Bells Mainnet",
-    type: ChainType.Bells,
-    network: UTXONetworkType.BellsMainnet,
-    symbol: "BEL",
-    explorer: "https://bells.quark.blue",
-    explorerTx: "https://bells.quark.blue/tx",
-    explorerAddress: "https://bells.quark.blue/address",
-    apiUrl: "https://api.nintondo.io/api",
-}
-
 export const nervosMainnet:Chain = {
     name: "Mirana Mainnet",
     type: ChainType.Nervos,
@@ -78,6 +67,7 @@ export const nervosTestnet:Chain = {
     name: "Pudge Testnet",
     type: ChainType.Nervos,
     network: UTXONetworkType.NervosTestnet,
+    testnet: true,
     symbol: "CKB",
     explorer: "https://pudge.explorer.nervos.org/",
     explorerTx: "https://pudge.explorer.nervos.org/transaction",
