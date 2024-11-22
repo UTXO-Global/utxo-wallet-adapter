@@ -1,5 +1,9 @@
 # @utxo-global/utxo-wallet-adapter
 
+
+## NOTICE (22 Nov 2024)
+- We (UTXO Global team) recommend using CCC https://github.com/ckb-devrel/ccc for testing.
+
 ## Get Started
 
 ```bash
